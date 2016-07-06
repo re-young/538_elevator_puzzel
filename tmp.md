@@ -5,7 +5,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is a relatively simple query that does not need many qualifying statements
 
-```sql
+```SQL
 select min(score)  as Precentila_90th 
 from (SELECT (a.predicted_eta-a.actual_eta) as score, 
 ntile(100) OVER (ORDER by a.predicted_eta-a.actual_eta) AS percentile
